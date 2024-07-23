@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Api Requests</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="apiRequest.js" defer></script>
+</head>
+
+<body>
+    <div class="mailSidebar">
+        <div class="mailSidebar__logo">
+            <button text="Mail App" class="mailSidebar__logo__button">
+                <img src="burger-menu.svg" class="mailSidebar__logo__hamburgerStyle"/>
+                <div class="mailSidebar__logo__logoStyles">📬</div>
+                <h2>Mail App</h2>
+            </button>
+        </div>
+        <div class="mailSidebar__compose">
+            <div class="mailSidebar__compose__container">
+                <button class="mailSidebar__compose__button">
+                    <div class="mailSidebar__compose__icon">🖊️</div>
+                    <h2>Compose</h2>
+                </button>
+            </div>
+        </div>
+        <div class="mailSidebar__mailboxes">
+            <app-api-content>
+            </app-api-content>
+            <app-api-content>
+            </app-api-content>
+            <app-api-content>
+            </app-api-content>
+        </div>
+    </div>
+    
+</body>
+
+</html>

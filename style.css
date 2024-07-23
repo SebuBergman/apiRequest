@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+}
+
+.mailSidebar {
+    display: flex;
+    flex-direction: column;
+    width: 484px;
+}
+
+    .mailSidebar__logo__button,
+    .mailSidebar__compose__button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Styles for the Mail App logo */
+    .mailSidebar__logo__button {
+        width: 100%;
+        padding: 0px 0px 0px 10px;
+        background-color: #fff;
+        border: 0px;
+        border-radius: 0px 50px 50px 0px;
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+
+        .mailSidebar__logo__hamburgerStyle {
+            width: 35px;
+            padding: 10px;
+        }
+
+            .mailSidebar__logo__hamburgerStyle:hover {
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                cursor: pointer;
+                background-color: #E8EAED;
+            }
+
+        .mailSidebar__logo__logoStyles {
+            padding: 0px 15px 0px 20px;
+            font-size: 1.5rem;
+        }
+
+    /* Compose button styles */
+    .mailSidebar__compose__container {
+        border-radius: 25px;
+        border: 0px;
+        padding-right: 20px;
+        margin: 8px 0px 16px 8px;
+    }
+
+        .mailSidebar__compose__button {
+            background-color: #C2E7FF;
+            padding: 10px 30px 10px 5px;
+            border: 0px;
+            border-radius: 16px;
+        }
+
+            .mailSidebar__compose__button:hover {
+                box-shadow: 0 1px 3px 0 rgba(60, 64, 67,.3),
+                0 4px 8px 3px rgba(60, 64, 67,.15);
+                background-color: #C2E7FF;
+                cursor: pointer;
+            }
+
+        .mailSidebar__compose__icon {
+            padding: 0px 15px 0px 15px;
+            font-size: 1.5rem;
+        }
+
+    /* mailbox styles */
+    .mailSidebar__mailboxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
