@@ -26,33 +26,26 @@ const responses =
 const data = await
     Promise.all(responses.map(response => response.json()));
 
-return data
+    return data
 }
 catch (error) {
-throw new Error(`Failed to fetch data: ${error}`)
+    throw new Error(`Failed to fetch data: ${error}`)
 }
 }
 
 fetchURLs(urlsToFetch)
-.then(data => {
-data.forEach(painting => {
-    const markup = `<ul class="api__container" >
-                        <li><h3>${painting.data.title}</h3></li>
-                        <li><img src="https://www.artic.edu/iiif/2/${painting.data.image_id}/full/843,/0/default.jpg" class="api-image" /></li>
-                        <li>About: ${painting.data.thumbnail.alt_text}</li>
-                        <li>Painting by: ${painting.data.artist_title}</li>
-                    </ul>`;
-
-    document.querySelector("paintings").insertAdjacentHTML("beforeend", markup);
-})
-console.log('Fetched data:', data)
-/*for (let i = 0; i < data.length; i++) {
-    console.log(data.length);
-    displayedData.push(data[i].data.department_title);
-}*/
-})    
-.catch(error => {
-console.error('Error fetching data:', error)
-});
-
-console.log(displayedData);
+    .then(data => {
+        data.forEach(painting => {
+            const markup = 
+                `<ul class="api__container" >
+                    <li><h3>${painting.data.title}</h3></li>
+                    <li><img src="https://www.artic.edu/iiif/2/${painting.data.image_id}/full/843,/0/default.jpg" class="api-image" /></li>
+                    <li>About: ${painting.data.thumbnail.alt_text}</li>
+                    <li>Painting by: ${painting.data.artist_title}</li>
+                </ul>`;
+            document.querySelector("paintings").insertAdjacentHTML("beforeend", markup);
+        })
+    })    
+    .catch(error => {
+        console.error(`Error fetching data ${error}`)
+    });
