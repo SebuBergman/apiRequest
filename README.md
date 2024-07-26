@@ -1,1 +1,1 @@
-A basic javascript calculator
+A basic javascript API requester
